@@ -1,0 +1,24 @@
+{
+  "name": "rawq-store",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "متجر عربي للقهوة وأدوات التحضير — مشروع واجهة أمامية لمعرض الأعمال",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test tests/core.test.mjs",
+    "test:e2e": "node tests/browser.mjs",
+    "build": "node tools/build.mjs",
+    "format": "prettier --write src style.css tools tests README.md",
+    "format:check": "prettier --check src style.css tools tests README.md",
+    "test:a11y": "node tests/accessibility.mjs",
+    "screenshots": "node tools/screenshots.mjs",
+    "test:loading": "node tests/loading.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.13.0",
+    "esbuild": "0.28.2",
+    "playwright": "1.62.1",
+    "prettier": "3.9.9"
+  }
+}

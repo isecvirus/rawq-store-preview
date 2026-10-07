@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#253c32" />
+    <meta
+      name="description"
+      content="رَوْق — متجر تجريبي عربي للقهوة وأدوات التحضير. تجربة تسوّق متكاملة من اختيار المنتج إلى معاينة الطلب."
+    />
+    <title>رَوْق | خذ وقتك، واضبط قهوتك</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="src/app.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">انتقل إلى المحتوى</a>
+    <div class="announcement">
+      <span>على مهل، يصير الصباح أجمل.</span
+      ><span
+        >شحن مجاني للطلبات من 250 ر.س
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#truck"></use></svg
+      ></span>
+    </div>
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="#/" aria-label="رَوْق — الرئيسية"
+          ><span class="brand-ar">رَوْق<span class="brand-dot">.</span></span
+          ><span class="brand-latin">RAWQ</span></a
+        >
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <a href="#/" data-nav="home">الرئيسية</a><a href="#/shop" data-nav="shop">تسوّق</a
+          ><a href="#/shop?category=tools" data-nav="tools">أدوات التحضير</a
+          ><a href="#/journal" data-nav="journal">دليل القهوة</a
+          ><a href="#/about" data-nav="about">حكاية رَوْق</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-button" data-action="search" aria-label="ابحث في المتجر">
+            <svg class="icon" aria-hidden="true">
+              <use href="assets/icons/sprite.svg#search"></use>
+            </svg>
+          </button>
+          <a class="icon-button favorites-link" href="#/favorites" aria-label="المفضلة"
+            ><svg class="icon" aria-hidden="true">
+              <use href="assets/icons/sprite.svg#heart"></use></svg
+            ><span class="small-count" data-favorite-count hidden>0</span></a
+          >
+          <button class="cart-toggle" data-action="cart" aria-label="سلة التسوق، فارغة">
+            <svg class="icon" aria-hidden="true">
+              <use href="assets/icons/sprite.svg#shopping-bag"></use></svg
+            ><span class="cart-label">السلة</span><span class="cart-count" data-cart-count>0</span>
+          </button>
+          <button class="icon-button menu-button" data-action="menu" aria-label="افتح قائمة التنقل">
+            <svg class="icon" aria-hidden="true">
+              <use href="assets/icons/sprite.svg#menu"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- prerender-templates -->
+    <main id="main" tabindex="-1" aria-busy="true"><!-- initial-content --></main>
+    <!-- prerender-bootstrap -->
+    <noscript><p class="container">فعّل JavaScript في المتصفح لتجربة المتجر والسلة.</p></noscript>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="#/"
+            ><span class="brand-ar">رَوْق.</span><span class="brand-latin">RAWQ</span></a
+          >
+          <p>للقهوة وقتها.<br />وللتفاصيل الصغيرة، أثرها.</p>
+        </div>
+        <div>
+          <h2>تسوّق على ذوقك</h2>
+          <a href="#/shop?category=coffee">القهوة</a
+          ><a href="#/shop?category=tools">أدوات التحضير</a
+          ><a href="#/shop?category=cups">الأكواب</a><a href="#/shop?category=sets">المجموعات</a>
+        </div>
+        <div>
+          <h2>حول رَوْق</h2>
+          <a href="#/about">حكايتنا</a><a href="#/journal">دليل القهوة</a
+          ><a href="#/help">الأسئلة الشائعة</a><a href="#/help?topic=shipping">التوصيل والاستلام</a>
+        </div>
+        <div class="footer-note">
+          <span class="footer-eyebrow">وقتك، على مزاجك</span>
+          <p>اختر قهوتك.<br />رتّب ركنك.<br />واستمتع بالتفاصيل.</p>
+          <a class="text-link light" href="#/shop"
+            >اكتشف المجموعة
+            <svg class="icon" aria-hidden="true">
+              <use href="assets/icons/sprite.svg#arrow-up-left"></use></svg
+          ></a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>رَوْق © 2026</span><span>مشروع تجريبي لمعرض أعمال</span
+        ><a href="#/help?topic=privacy">الخصوصية</a>
+      </div>
+    </footer>
+    <dialog id="cart-dialog" class="drawer" aria-labelledby="cart-title"></dialog>
+    <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title"></dialog>
+    <dialog id="menu-dialog" class="menu-dialog" aria-label="قائمة التنقل"></dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
